@@ -17,3 +17,7 @@ jobs:
               with:
                   role-to-assume: arn:aws:iam::092376285579:role/github-actions-terraform
                   aws-region: us-east-1
+            - name: Run Terraform Initialization Command
+              run: terraform init
+            - name: Run Terraform plan
+              run: terraform plan
